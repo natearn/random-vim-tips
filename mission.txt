@@ -1,0 +1,33 @@
+The objective is to create a React component which provides randomized vim tips.
+
+Constraints:
+
+	- the component should be self-contained, requiring no specific configuration from the user
+	- the component should be configurable to do either a single fetch or interval fetch for data
+	- the component should expose a pure render function
+	- the component should have a configurable api source
+
+I will create a simple REST API server which will provide randomized tips.
+
+Constraints:
+
+	- responds with JSON
+	- provides titles and links to full articles
+	- can optionally produce tips in batches
+
+While unnecessary, I would like to maintain a database of tips by sourcing vim.wikia.com.
+I find this preferable to fetching the complete list of tips on every request.
+The database will not need to be updated frequently, but should be updated automatically for completeness.
+
+Challenges:
+
+	- find free hosting for the API
+	- automate db updates without using my own machine
+
+The result should be a robust solution that could remain functional without any maintenance possibly indefinitely.
+
+See Also:
+
+http://www.wikia.com/api/v1/#!/Articles
+http://vim.wikia.com/wiki/Category:VimTip
+https://vimtricks.com
